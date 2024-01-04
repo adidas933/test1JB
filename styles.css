@@ -1,0 +1,21 @@
+.createImg {
+  width: 100px;
+  height: 100px;
+}
+
+.buttonAddProduct {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+h1 {
+  margin: 20px;
+}
+
+input {
+  margin: 10px;
+}
+
+label {
+  margin: 10px;
+}
