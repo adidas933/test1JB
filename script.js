@@ -8,6 +8,7 @@ const allInputs = document.querySelectorAll('.inputs');
 const outputsAsArray = [];
 
 document.querySelector('.buttonAddProduct').addEventListener('click', function() {
+  // GOOD!
   if (inputEmpty()) {
     alert('Please fill all inputs');
   } else {
@@ -16,6 +17,8 @@ document.querySelector('.buttonAddProduct').addEventListener('click', function()
 })
 
 function inputEmpty() {
+  //ALUF!!
+  // you just return the oppisite of this if
   if (inputProduct.value === '' || inputPrice.value === '' || inputCategory.value === '' || inputPicture.value === '') {
     return true;
   }
@@ -35,25 +38,25 @@ function createElements() {
   let trCreate = document.createElement('tr');
   trCreate.className = 'trCreated';
   tbody.appendChild(trCreate);
-  
+  //tr create? its a good name? titbaish!
   const tdCreate1 = document.createElement('td');
   tdCreate1.className = 'tdCreated1';
   tdCreate1.innerText = inputProduct.value;
   trCreate.appendChild(tdCreate1);
   outputObj.name = tdCreate1.innerText;
-  
+  // shame 
   const tdCreate2 = document.createElement('td');
   tdCreate2.className = 'tdCreated2';
   tdCreate2.innerText = inputPrice.value;
   trCreate.appendChild(tdCreate2);
   outputObj.price = tdCreate2.innerText;
-  
+    // shame 
   const tdCreate3 = document.createElement('td');
   tdCreate3.className = 'tdCreated3';
   tdCreate3.innerText = inputCategory.value;
   trCreate.appendChild(tdCreate3);
   outputObj.category = tdCreate3.innerText;
- 
+  // funciton?
   const createImg = document.createElement('img');
   createImg.className = 'createImg';
   createImg.src = inputPicture.value;
@@ -62,16 +65,18 @@ function createElements() {
   outputsAsArray.push(outputObj);
 
   resetInputs();
+  //no console in code.
   console.log(outputsAsArray);  
   
   const deleteButtonCreate = document.createElement('button');
   deleteButtonCreate.className = 'deleteButtonCreated';
+  //nice!
   deleteButtonCreate.innerHTML = '<i class="fa-solid fa-x"></i>';
   deleteButtonCreate.style.color = 'red';
   deleteButtonCreate.style.position = 'relative';
   deleteButtonCreate.style.left = '243px';
   trCreate.appendChild(deleteButtonCreate);
-  
+  //nice!
   deleteButtonCreate.addEventListener('click', function() {
     trCreate.style.visibility = 'hidden';
     tbody.removeChild(trCreate);
